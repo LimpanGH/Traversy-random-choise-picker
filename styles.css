@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-* {
+* {                                         /* Universal selector to reset margin and padding in the whole html-document. */
     box-sizing: border-box;
 }
 
-body {
+body {                                      /* Targeting everything in the body. */
     background-color: #2b88f0;
     font-family: 'Muli', 'sans-serif';
     display: flex;
@@ -21,19 +21,32 @@ h3 {
     margin: 10px 0 20px;
 }
 
-.container {
-    width: 50px; 
+.container {                                /* Targeting everything in the container. */
+    width: 500px; 
 }
 
- textarea {
+/* There seems to be an inherit property to "textarea" that gives it a border when selected.  */
+ textarea {                                 /* Targeting the textarea. */
     border: none;
     display: block;
-    width: 100%;
-
-
+    width: 100%;                            /* 100% of the container. */
+    height: 100px;
+    font-family: inherit;
+    padding: 10px;                          /* Padding i set to 10px for top, right, bottom and left, between text in the textarea and the textareas border. */
+    margin: 0 0 20px;                       /* Margin is set to top 0, right and left 0 and down 20px, between the textarea and the div with Choice. https://developer.mozilla.org/en-US/docs/Web/CSS/margin  */
+    font-size: 16px;
 }
 
+.tag {                                      /* Targeting the divs with "choice". */
+    background-color: #f0932b;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;                     /* 10px top and bottom, 20px left and right between the text and border in the choice divs */
+    margin: 0 5px 10px 0;                   /* Why does'nt top change when i change top-margin? Answer: you have to set "display" to "inline-block" for it to work. Top 0, right 5px, bottom 10px, left 0. */
+    font-size: 14px;
+    display: inline-block;
+}
 
- /* display: block;
-    width: 100%;        /* 100% of what? The container?
-    height: 100px; */
+.tag.highlight {                            /* We call the html elements wtih class of "tag" and arrange so the class of "highlight" can be added, probably via .js later on. This way, when a "choice" is active, it'll turn blue. */
+    background-color: #273c75;
+}
