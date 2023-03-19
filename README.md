@@ -4,4 +4,15 @@ https://github.com/bradtraversy/50projects50days/tree/master/random-choice-picke
 
 https://www.youtube.com/watch?v=JkeyKeK3V24. Timestamp 41:23.
 
-4004 6208
+
+Q.A ----------------------------------------------------- 
+
+* js line 22:  Why do we need .map(tag => tag.trim()), we already told it to trim?
+
+
+
+
+
+
+
+Fortsätt här: https://www.youtube.com/watch?v=JkeyKeK3V24 time 52:23
