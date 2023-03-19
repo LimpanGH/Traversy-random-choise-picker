@@ -16,6 +16,3 @@ Q.A -----------------------------------------------------
 
 
 Fortsätt här: https://www.youtube.com/watch?v=JkeyKeK3V24 time 52:23
-
-testar om mathieus syncar med github
-sdfgdsfgdfg
