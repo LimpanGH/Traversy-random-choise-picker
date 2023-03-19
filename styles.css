@@ -32,7 +32,7 @@ h3 {
     display: block;
     width: 100%;                            /* 100% of the container. */
     height: 100px;
-    font-family: inherit;
+    font-family: inherit;                   /* Inherits the font specified in body, i.e Muli */
     padding: 10px;                          /* Padding i set to 10px for top, right, bottom and left, between text in the textarea and the textareas border. */
     margin: 0 0 20px;                       /* Margin is set to top 0, right and left 0 and down 20px, between the textarea and the div with Choice. https://developer.mozilla.org/en-US/docs/Web/CSS/margin  */
     font-size: 16px;
@@ -48,6 +48,6 @@ h3 {
     display: inline-block;
 }
 
-.tag.highlight {                            /* We call the html elements wtih class of "tag" and arrange so the class of "highlight" can be added, probably via .js later on. This way, when a "choice" is active, it'll turn blue. */
+.tag.highlight {                            /* We call the html elements wtih class of "tag" and arrange so the class of "highlight" can be added, probably via .js later on. This way, when a "choice" is active i.e randomly selected by our code, it'll turn blue. */
     background-color: #273c75;
 }
