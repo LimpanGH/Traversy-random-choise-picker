@@ -7,7 +7,9 @@ https://www.youtube.com/watch?v=JkeyKeK3V24. Timestamp 41:23.
 
 Q.A ----------------------------------------------------- 
 
-* js line 22:  Why do we need .map(tag => tag.trim()), we already told it to trim?
+* js line 9: How does the eventparameter "(e)" work?
+* js line 22:  Why do we need ".map(tag => tag.trim())", we already told it to trim?
+* js line 27: What does "('span')"  do?, When I replace it with other text, nothing changes in the application.
 
 
 
