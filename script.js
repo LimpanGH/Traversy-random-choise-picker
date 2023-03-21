@@ -9,12 +9,12 @@ textarea.focus()                                          // With the focus-meth
 textarea.addEventListener('keyup', (e) => {               // We want an eventlistener on the text-area and we set it to listen for when a keyboard-key is pressed down and then released. When that happens "=>" ...
     createTags(e.target.value)                            // ... we call the function "create tags". We pass in "e.target.value", which is basically what we are typing in our text-area later.
                                                           // The "e" is short for event and is an event parameter, https://stackoverflow.com/questions/35936365/what-exactly-is-the-parameter-e-event-and-why-pass-it-to-javascript-functions.
-    if(e.key === 'Enter') {
-        setTimeout(() => {
-            e.target.value = ''
+    if(e.key === 'Enter') {                               // Randomly select a tag when we hit enter. Syntax: if (enventobject with key-property, key equals to Enter)...
+        setTimeout(() => {                                // Line 13,14,15 aims to clear textfield when you hit enter, but delayed with 10 milliseconds. The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires, https://developer.mozilla.org/en-US/docs/Web/API/setTimeout.
+            e.target.value = ''                           // clearing ".value" (what we wrote in textarea). https://developer.mozilla.org/en-US/docs/Web/API/Event/target
         }, 10)
 
-        randomSelect()
+        randomSelect()                                    //... then call the function "randomSelect"
     }
 })
 
@@ -31,11 +31,11 @@ function createTags(input) {                              // Here we create the 
     })
 }
 
-function randomSelect() {
-    const times = 30
+function randomSelect() {                                 // Creating a randomisation-function that we can name "randomSelect".
+    const times = 30                                      // Setting the number of times the tags will be highlighted before stopping at att random tag.
 
-    const interval = setInterval (() => {
-        const randomTag = pickRandomTag()    
+    const interval = setInterval (() => {  
+        const randomTag = pickRandomTag()     
         
     if (randomTag !== undefined) {    
         highlightTag(randomTag)
@@ -57,16 +57,15 @@ function randomSelect() {
     }, times * 100)
 }
 
-function pickRandomTag() { 
-    const tags = document.querySelectorAll('.tag')
-    return tags[Math.floor(Math.random() * tags.length)]
+function pickRandomTag() {                                // Creating the function that we can name "pickRandomTag"
+    const tags = document.querySelectorAll('.tag')        // we take all the tags by using "document.querySelectorAll" and tell it to select all ellements with a class of ".tag", creates a Node-list with index (similar to an array) that we bring in.
+    return tags[Math.floor(Math.random() * tags.length)]  // the index is gonna be random, we use "Math.floor" to round down and "map.random" to give us a random decimal, and then multiply it by the length of the tags Node-list. This gives us a random tag.
 }
 
-function highlightTag(tag) {
-    tag.classList.add('highlight')
+function highlightTag(tag) {                              // Creating a function that we can name "highlightTag" 
+    tag.classList.add('highlight')                        // it takes in a specific tag-element and adds class of highlight
 }
 
 function unHighlightTag(tag) {
     tag.classList.remove('highlight')
-}
-
+}l
