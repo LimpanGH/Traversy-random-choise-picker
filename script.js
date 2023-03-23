@@ -26,7 +26,7 @@ textarea.addEventListener('keyup', (e) => {               // We want an eventlis
 
 
 
-function createTags(input) {                              // Here we create the function "createTags" that we are calling on line 14-15, we tell it to take the input from what is written in the textarea.
+fu≤≤nction createTags(input) {                              // Here we create the function "createTags" that we are calling on line 14-15, we tell it to take the input from what is written in the textarea.
     const tags = input.split(',')  .filter(tag => tag.trim() !== '')                        .map(tag => tag.trim()) /* here we tell the code to split words that has a comma between and create an array of the words we type in, we also trim any extra spacing that we might type in. Filter is a high-order array-method that allows you to return certain things based on a conditional. The map() method creates a new array populated with the results of calling a provided function on every element in the calling array, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map.
  // const name = split text by ,   return tags without witespace, unless they're empty     for each tag, return an array with the tag and trim it                                                                               The code ".filter(tag => tag.trim() !== '')" means that for each tag => trim of whitespace from the tag and if it's not an empty string " !== '' ", then return it.  Map manipulates the array, for each tag, we want to return an array with the tag but we want to trim the tags. So basically we say it can't be an empty string and also we are going to trim any white-space.*/
     tagsEl.innerHTML = ''                                 // Clears the "textarea" so that the tags don't pile up.  
@@ -68,7 +68,7 @@ function randomSelect() {                                 // Creating a randomis
 }
 
 
-
+s
 
 function pickRandomTag() {                                // Creating the function that we can name "pickRandomTag"
     const tags = document.querySelectorAll('.tag')        // we take all the tags by using "document.querySelectorAll" and tell it to select all ellements with a class of ".tag", creates a Node-list with index (similar to an array) that we bring in.
